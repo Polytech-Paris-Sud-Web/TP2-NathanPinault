@@ -31,17 +31,15 @@
     {
       "name": "datas",
       "urls": [
-        "https://polytech-paris-sud-web.github.io/TP2-NathanPinault/",
-        "https://polytech-paris-sud-web.github.io/TP2-NathanPinault/articles",
-        "https://polytech-paris-sud-web.github.io/TP2-NathanPinault/articles/*",
-        "https://polytech-paris-sud-web.github.io/TP2-NathanPinault/create",
-        "https://polytech-paris-sud-web.github.io/TP2-NathanPinault/author/name=*"
+        "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2-NathanPinault/articles",
+        "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2-NathanPinault/articles/*",
+        "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2-NathanPinault/authors"
       ],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 30,
         "timeout": "2s",
-        "maxAge": "60m"
+        "maxAge": "6h"
       }
     }
   ]
