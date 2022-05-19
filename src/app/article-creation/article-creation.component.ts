@@ -16,9 +16,9 @@ export class ArticleCreationComponent implements OnInit {
 
   constructor(private fb: FormBuilder, public articleService: ArticleService, private router: Router) {
     this.articleForm = this.fb.group({
-      title: ['Fake Title', Validators.required ],
-      content : ['', Validators.required ],
-      authors : ['', Validators.required ],
+      title: ['A Title', Validators.required ],
+      content : ['Some content', Validators.required ],
+      authors : ['Anonymous', Validators.required ],
     });
   }
   
