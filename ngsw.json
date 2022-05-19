@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652960036820,
+  "timestamp": 1652965970029,
   "index": "/TP2-NathanPinault/index.html",
   "assetGroups": [
     {
@@ -46,15 +46,13 @@
     {
       "name": "datas",
       "patterns": [
-        "https:\\/\\/polytech-paris-sud-web\\.github\\.io\\/TP2-NathanPinault\\/",
-        "https:\\/\\/polytech-paris-sud-web\\.github\\.io\\/TP2-NathanPinault\\/articles",
-        "https:\\/\\/polytech-paris-sud-web\\.github\\.io\\/TP2-NathanPinault\\/articles\\/[^/]*",
-        "https:\\/\\/polytech-paris-sud-web\\.github\\.io\\/TP2-NathanPinault\\/create",
-        "https:\\/\\/polytech-paris-sud-web\\.github\\.io\\/TP2-NathanPinault\\/author\\/name=[^/]*"
+        "https:\\/\\/my-json-server\\.typicode\\.com\\/Polytech-Paris-Sud-Web\\/TP2-NathanPinault\\/articles",
+        "https:\\/\\/my-json-server\\.typicode\\.com\\/Polytech-Paris-Sud-Web\\/TP2-NathanPinault\\/articles\\/[^/]*",
+        "https:\\/\\/my-json-server\\.typicode\\.com\\/Polytech-Paris-Sud-Web\\/TP2-NathanPinault\\/authors"
       ],
       "strategy": "freshness",
       "maxSize": 30,
-      "maxAge": 3600000,
+      "maxAge": 21600000,
       "timeoutMs": 2000,
       "cacheQueryOptions": {
         "ignoreVary": true
