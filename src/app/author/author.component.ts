@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ArticleService } from "../article.service"
 import { AuthorService } from '../author.service';
 
 export type Author = Readonly<{

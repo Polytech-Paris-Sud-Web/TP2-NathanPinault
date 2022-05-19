@@ -36,10 +36,10 @@
         "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2-NathanPinault/authors"
       ],
       "cacheConfig": {
-        "strategy": "freshness",
-        "maxSize": 30,
-        "timeout": "2s",
-        "maxAge": "6h"
+        "strategy": "performance",
+        "maxSize": 50,
+        "timeout": "1s",
+        "maxAge": "30d"
       }
     }
   ]
