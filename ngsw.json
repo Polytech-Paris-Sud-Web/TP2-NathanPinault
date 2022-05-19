@@ -1,0 +1,83 @@
+{
+  "configVersion": 1,
+  "timestamp": 1652957914016,
+  "index": "/TP2-NathanPinault/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/TP2-NathanPinault/favicon.ico",
+        "/TP2-NathanPinault/index.html",
+        "/TP2-NathanPinault/main.d5c41b7d620b38dc.js",
+        "/TP2-NathanPinault/manifest.webmanifest",
+        "/TP2-NathanPinault/polyfills.398026920aea67be.js",
+        "/TP2-NathanPinault/runtime.39b9c598bcf6abf2.js",
+        "/TP2-NathanPinault/styles.ef46db3751d8e999.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/TP2-NathanPinault/assets/icons/apple-touch-icon.png",
+        "/TP2-NathanPinault/assets/icons/icon-128x128.png",
+        "/TP2-NathanPinault/assets/icons/icon-144x144.png",
+        "/TP2-NathanPinault/assets/icons/icon-152x152.png",
+        "/TP2-NathanPinault/assets/icons/icon-192x192.png",
+        "/TP2-NathanPinault/assets/icons/icon-384x384.png",
+        "/TP2-NathanPinault/assets/icons/icon-512x512.png",
+        "/TP2-NathanPinault/assets/icons/icon-72x72.png",
+        "/TP2-NathanPinault/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/TP2-NathanPinault/assets/icons/apple-touch-icon.png": "34ab9918a67b1fb44464f90bbc26639fc4db569c",
+    "/TP2-NathanPinault/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/TP2-NathanPinault/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/TP2-NathanPinault/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/TP2-NathanPinault/assets/icons/icon-192x192.png": "687a1ce324b33710ed1a80373ad333bc909f59ca",
+    "/TP2-NathanPinault/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/TP2-NathanPinault/assets/icons/icon-512x512.png": "d3888dae3d17d29247fa5c8689c841d3fbcc2d71",
+    "/TP2-NathanPinault/assets/icons/icon-72x72.png": "ce4dae46917e8efbf834a1af20ef759a94d3a36f",
+    "/TP2-NathanPinault/assets/icons/icon-96x96.png": "026bf9b528d601d3da48d5b083e1bd0c0c15cc3e",
+    "/TP2-NathanPinault/favicon.ico": "a8ce2cf9aaabf62287283478e06c5a9761083e61",
+    "/TP2-NathanPinault/index.html": "28b725a2614b467485a6bc0dbe5e701734e7e512",
+    "/TP2-NathanPinault/main.d5c41b7d620b38dc.js": "974f129496f39443eec16e7358ee839208838981",
+    "/TP2-NathanPinault/manifest.webmanifest": "c0e252f16cd08005e12fe72b1a08310b206a6992",
+    "/TP2-NathanPinault/polyfills.398026920aea67be.js": "06c0d4743f0e7bb072c6c46a7d973e235f146674",
+    "/TP2-NathanPinault/runtime.39b9c598bcf6abf2.js": "dd72253a19e6ba3286a052a1de000fe6e863c2f3",
+    "/TP2-NathanPinault/styles.ef46db3751d8e999.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
