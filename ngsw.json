@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652957914016,
+  "timestamp": 1652959112633,
   "index": "/TP2-NathanPinault/index.html",
   "assetGroups": [
     {
@@ -42,7 +42,24 @@
       "patterns": []
     }
   ],
-  "dataGroups": [],
+  "dataGroups": [
+    {
+      "name": "api-performance",
+      "patterns": [
+        "https:\\/\\/polytech-paris-sud-web\\.github\\.io\\/TP2-NathanPinault\\/",
+        "https:\\/\\/polytech-paris-sud-web\\.github\\.io\\/TP2-NathanPinault\\/articles",
+        "https:\\/\\/polytech-paris-sud-web\\.github\\.io\\/TP2-NathanPinault\\/create",
+        "https:\\/\\/polytech-paris-sud-web\\.github\\.io\\/TP2-NathanPinault\\/author"
+      ],
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
   "hashTable": {
     "/TP2-NathanPinault/assets/icons/apple-touch-icon.png": "34ab9918a67b1fb44464f90bbc26639fc4db569c",
     "/TP2-NathanPinault/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
