@@ -1,0 +1,44 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "My First Article",
+      "content": "Hello World",
+      "authors": "Orangefire"
+    },
+    {
+      "id": 2,
+      "title": "Angular component",
+      "content": "Angular component looks awesome!",
+      "authors": "Orangefire"
+    },
+    {
+      "id": 3,
+      "title": "Angular service",
+      "content": "I read something about angular service, i will try it soon",
+      "authors": "Orangefire"
+    },
+    {
+      "id": 4,
+      "title": "Added Article",
+      "content": "For test purpose",
+      "authors": "Oskour P."
+    },
+    {
+      "id": 5,
+      "title": "Another Article",
+      "content": "For test purpose",
+      "authors": "Snif"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Orangefire",
+      "biography": "Angular component looks awesome!"
+    },
+    {
+      "name": "Oskour P.",
+      "biography": "Célèbre auteur à la poursuite de la fin du TP..."
+    }
+  ]
+}

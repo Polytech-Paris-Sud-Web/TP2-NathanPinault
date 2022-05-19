@@ -1,0 +1,7 @@
+<div *ngIf="this.article?.id && this.article?.title && this.article?.content && this.article?.authors" class="article">
+  <h3> Article n°{{this.article?.id}} : {{this.article?.title}} </h3>
+  <p> {{this.article?.content}} </p>
+  <h5>From : <a routerLink="/author/{{this.article?.authors}}">{{this.article?.authors}}</a> </h5>
+  <button (click)="detail()">Full article</button>
+  <button (click)="delete()">Delete</button>
+</div>

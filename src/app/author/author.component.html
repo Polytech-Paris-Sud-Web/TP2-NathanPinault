@@ -1,0 +1,7 @@
+<div *ngIf="this.author?.name && this.author?.biography && this.author?.biography?.length !== 0">
+  <h3> Biography of {{this.author?.name}} </h3>
+  <p> {{this.author?.biography}} </p>
+</div>
+<div *ngIf="!(this.author?.name && this.author?.biography && this.author?.biography?.length !== 0)">
+  <p> No biography available for this author... </p>
+</div>

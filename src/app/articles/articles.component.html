@@ -1,0 +1,19 @@
+<!--
+<div>
+  <app-article [id]="1" [title]="'Test'" [customContent]="'of inputs'"></app-article>
+  <app-article [id]="2" [title]="this.article.title" [customContent]="this.article.content"></app-article>
+</div>
+-->
+<div *ngIf="this.articles?.length !== 0 && this.articles !== undefined; then dbUp else dbDown"></div>
+
+<ng-template #dbUp>
+  <div>
+    <h2>List of articles : </h2>
+    <app-article *ngFor="let article of this.articles" [article]="this.article" (click)="this.articleService.deleteArticle(this.article?.id);" (deletedArticle)="delete($event)"></app-article>
+  </div>
+</ng-template>
+<ng-template #dbDown>
+  <div>
+    <p> No articles load from server </p>
+  </div>
+</ng-template>
