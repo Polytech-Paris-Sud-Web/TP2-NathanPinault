@@ -32,13 +32,13 @@
       "name": "datas",
       "urls": [
         "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2-NathanPinault/articles",
-        "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2-NathanPinault/articles/*",
+        "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2-NathanPinault/articles/**",
         "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2-NathanPinault/authors"
       ],
       "cacheConfig": {
         "strategy": "performance",
         "maxSize": 100,
-        "maxAge": "3d"
+        "maxAge": "5d"
       }
     }
   ]
