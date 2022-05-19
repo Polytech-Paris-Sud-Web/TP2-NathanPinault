@@ -1,6 +1,6 @@
 # TP1-Nathan-Pinault
 
-A reçu de l'aide de : Tom MANSION, Sophie NGUYEN et Rémi CHAGNAS
+A reçu de l'aide de : Rémy CHAGNAS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 

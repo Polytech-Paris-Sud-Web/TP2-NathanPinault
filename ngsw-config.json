@@ -26,5 +26,21 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-performance",
+      "urls": [
+        "https://polytech-paris-sud-web.github.io/TP2-NathanPinault/",
+        "https://polytech-paris-sud-web.github.io/TP2-NathanPinault/articles",
+        "https://polytech-paris-sud-web.github.io/TP2-NathanPinault/create",
+        "https://polytech-paris-sud-web.github.io/TP2-NathanPinault/author"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 100,
+        "maxAge": "3d"
+      }
+    }
   ]
 }
