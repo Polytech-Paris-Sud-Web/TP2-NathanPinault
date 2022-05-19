@@ -25,7 +25,6 @@ export class ArticleCreationComponent implements OnInit {
   create() {
     const newArticle : CreateArticle = this.articleForm.value;
     this.articleService.createArticle(newArticle).subscribe( {next: () => {
-      console.log("Added");
       this.router.navigateByUrl('/');
     }});
   }

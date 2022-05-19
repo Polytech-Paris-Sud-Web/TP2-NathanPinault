@@ -16,7 +16,6 @@ export class AllArticlesComponent implements OnInit {
   }
 
   search(inputSearch: string) {
-    console.log("searched : " + inputSearch);
     this.articleService.getArticles().subscribe( (articles) => {
       this.articles = articles.filter( (article) => article.title.includes(inputSearch) || article.content.includes(inputSearch) ); 
     });
@@ -24,7 +23,6 @@ export class AllArticlesComponent implements OnInit {
 
   delete(article: Article) {  
     this.articleService.deleteArticle(article.id).subscribe( {next: () => {
-      console.log("Deleted");
     }});
   }
 

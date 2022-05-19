@@ -12,6 +12,8 @@ import { ArticleService } from './article.service';
 import { ArticleCreationComponent } from './article-creation/article-creation.component';
 import { AllArticlesComponent } from './all-articles/all-articles.component';
 import { AuthorComponent } from './author/author.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const appRoutes: Routes = [
   { path: 'create', component: ArticleCreationComponent },
@@ -38,7 +40,13 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent]
