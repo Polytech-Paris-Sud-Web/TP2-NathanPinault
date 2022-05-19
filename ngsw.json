@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652969817704,
+  "timestamp": 1652970328882,
   "index": "/TP2-NathanPinault/index.html",
   "assetGroups": [
     {
@@ -51,9 +51,8 @@
         "https:\\/\\/my-json-server\\.typicode\\.com\\/Polytech-Paris-Sud-Web\\/TP2-NathanPinault\\/authors"
       ],
       "strategy": "performance",
-      "maxSize": 50,
-      "maxAge": 2592000000,
-      "timeoutMs": 1000,
+      "maxSize": 100,
+      "maxAge": 259200000,
       "cacheQueryOptions": {
         "ignoreVary": true
       },
