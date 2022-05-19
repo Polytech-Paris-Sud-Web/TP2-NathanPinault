@@ -1,9 +1,3 @@
-<!--
-<div>
-  <app-article [id]="1" [title]="'Test'" [customContent]="'of inputs'"></app-article>
-  <app-article [id]="2" [title]="this.article.title" [customContent]="this.article.content"></app-article>
-</div>
--->
 <div *ngIf="this.articles?.length !== 0 && this.articles !== undefined; then dbUp else dbDown"></div>
 
 <ng-template #dbUp>

@@ -1,17 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { AuthorService } from '../author.service';
 
 export type Author = Readonly<{
   name: string;
   biography: string;
 }>
-
-// If we want to add a user page to create new authors
-export type CreateAuthor = {
-  name: string;
-  biography: string; 
-}
 
 @Component({
   selector: 'app-author',
@@ -23,7 +17,7 @@ export class AuthorComponent implements OnInit {
   @Input("author")
   author?: Author;
 
-  constructor(public authorService: AuthorService, private router: Router, private route: ActivatedRoute){
+  constructor(public authorService: AuthorService, private route: ActivatedRoute){
 
   }
 
