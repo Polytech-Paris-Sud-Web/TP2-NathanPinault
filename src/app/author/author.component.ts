@@ -23,13 +23,11 @@ export class AuthorComponent implements OnInit {
 
   ngOnInit(): void {
     const name = this.route.snapshot.paramMap.get('name');
-    if(name !== null) {
-      if (name !== undefined) {
-        this.authorService.getAuthor(name).subscribe( {next: (a : Author[]) => {
-            this.author = a[0];
-          }
-        });
-      }
+    if(name !== null && name !== undefined) {
+      this.authorService.getAuthor(name).subscribe( {next: (a : Author[]) => {
+          this.author = a[0];
+        }
+      });
     }
   }
 }

@@ -45,13 +45,11 @@ export class ArticleComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    if(id !== null) {
-      if (parseInt(id) !== NaN || parseInt(id) !== undefined) {
-        this.articleService.getArticle(parseInt(id)).subscribe( {next: (a) => {
-          this.article = a;
-          }
-        });
-      }
+    if(id !== null && (parseInt(id) !== NaN || parseInt(id) !== undefined)) {
+      this.articleService.getArticle(parseInt(id)).subscribe( {next: (a) => {
+        this.article = a;
+        }
+      });
     }
   }
 

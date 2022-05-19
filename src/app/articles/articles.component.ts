@@ -11,12 +11,6 @@ import { ArticleService } from "../article.service"
 export class ArticlesComponent implements OnInit {
               
   articles?: Article[];
-
-  //Start of TP1
-  /*constructor() { 
-    this.articles = [{id:1, title: 'My First Article', content : 'Hello World from private member', authors : 'Anonymous'},
-              {id:1, title: 'My First Article', content : 'Hello World from private member', authors : 'Anonymous'}];
-  }*/
   
   constructor(public articleService: ArticleService) {
 
