@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652966467221,
+  "timestamp": 1652967463670,
   "index": "/TP2-NathanPinault/index.html",
   "assetGroups": [
     {
@@ -50,10 +50,10 @@
         "https:\\/\\/my-json-server\\.typicode\\.com\\/Polytech-Paris-Sud-Web\\/TP2-NathanPinault\\/articles\\/[^/]*",
         "https:\\/\\/my-json-server\\.typicode\\.com\\/Polytech-Paris-Sud-Web\\/TP2-NathanPinault\\/authors"
       ],
-      "strategy": "freshness",
-      "maxSize": 30,
-      "maxAge": 21600000,
-      "timeoutMs": 2000,
+      "strategy": "performance",
+      "maxSize": 50,
+      "maxAge": 2592000000,
+      "timeoutMs": 1000,
       "cacheQueryOptions": {
         "ignoreVary": true
       },
