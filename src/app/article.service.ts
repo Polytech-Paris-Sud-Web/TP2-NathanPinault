@@ -8,45 +8,22 @@ import { Observable } from "rxjs";
 })
 export class ArticleService {
 
-  //Start of TP1
-  /*public getArticles() : Article[] {
-    return [{
-      id:1,
-      title: 'My First Article',
-      content: 'Hello World',
-      authors: 'Orangefire'
-    }, {
-      id:2,
-      title: 'Angular component',
-      content: 'Angular component looks awesome!',
-      authors: 'Orangefire'
-    }, {
-      id:3,
-      title: 'Angular service',
-      content: 'I read something about angular service, i will try it soon',
-      authors: 'Orangefire'
-    }, {
-      id:4,
-      title: 'Added Article',
-      content: 'For test purpose',
-      authors: 'Au secours...'
-    }];
-  }*/
+  private baseUrl = "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2-NathanPinault";
 
   public getArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>("http://localhost:3000/articles");
+    return this.http.get<Article[]>(`${this.baseUrl}/articles`);
   }
 
   public getArticle(id : number | undefined): Observable<Article> {
-    return this.http.get<Article>(`http://localhost:3000/articles/${id}`);
+    return this.http.get<Article>(`${this.baseUrl}/articles/${id}`);
   }
 
   public deleteArticle(id : number | undefined): Observable<any> {
-    return this.http.delete(`http://localhost:3000/articles/${id}`);
+    return this.http.delete(`${this.baseUrl}/articles/${id}`);
   }
 
   public createArticle(article: CreateArticle): Observable<any> {
-    return this.http.post("http://localhost:3000/articles", article);
+    return this.http.post(`${this.baseUrl}/articles`, article);
   }
 
   constructor(private readonly http : HttpClient) { }
