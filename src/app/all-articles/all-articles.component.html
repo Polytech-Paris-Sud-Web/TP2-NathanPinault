@@ -10,8 +10,9 @@
   </div>
 </ng-template>
 <ng-template #dbDown>
-  <div>
-    <p> No articles load from server </p>
-  </div>
+  <label class="center-block">Search:
+    <input class="form-control" name="inputSearch" #inputSearch (change)="search(inputSearch.value)">
+  </label>
+  <p> No articles load from server </p>
 </ng-template>
 
