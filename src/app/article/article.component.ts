@@ -31,6 +31,10 @@ export class ArticleComponent implements OnInit {
   @Output()
   deletedArticle : EventEmitter<Article> = new EventEmitter();
 
+  constructor(private articleService: ArticleService, private router: Router, private route: ActivatedRoute){
+    this.focus = false;
+  }
+
   delete(){
     this.deletedArticle.emit(this.article);
   }
@@ -45,20 +49,20 @@ export class ArticleComponent implements OnInit {
     return this.focus;
   }
 
-  constructor(private articleService: ArticleService, private router: Router, private route: ActivatedRoute){
-    this.focus = false;
-  }
-
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    if(id !== null && (parseInt(id) !== NaN || parseInt(id) !== undefined)) {
-      this.articleService.getArticle(parseInt(id)).subscribe( (a : Article) => {
-        this.article = a;
-      });
-      this.focus = true;
-    } else {
-      this.focus = false;
+    if(id !== null){
+      const idParsed = parseInt(id);
+      if(idParsed !== undefined){
+        this.articleService.getArticle(idParsed).subscribe( (a : Article) => {
+          this.article = a;
+        });
+        this.focus = true;
+      } else {
+        this.focus = false;
+      }
     }
+    
   }
 
 }
