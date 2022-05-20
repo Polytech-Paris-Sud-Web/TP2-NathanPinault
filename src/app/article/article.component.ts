@@ -25,6 +25,8 @@ export class ArticleComponent implements OnInit {
 
   @Input("article")
   article?: Article;
+  
+  focus: boolean;
 
   @Output()
   deletedArticle : EventEmitter<Article> = new EventEmitter();
@@ -39,8 +41,12 @@ export class ArticleComponent implements OnInit {
     });
   }
 
-  constructor(private articleService: ArticleService, private router: Router, private route: ActivatedRoute){
+  isDetail() {
+    return this.focus;
+  }
 
+  constructor(private articleService: ArticleService, private router: Router, private route: ActivatedRoute){
+    this.focus = false;
   }
 
   ngOnInit(): void {
@@ -49,6 +55,9 @@ export class ArticleComponent implements OnInit {
       this.articleService.getArticle(parseInt(id)).subscribe( (a : Article) => {
         this.article = a;
       });
+      this.focus = true;
+    } else {
+      this.focus = false;
     }
   }
 

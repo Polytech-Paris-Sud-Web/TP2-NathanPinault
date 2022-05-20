@@ -1,7 +1,16 @@
-<div *ngIf="this.article?.id && this.article?.title && this.article?.content && this.article?.authors" class="article">
+<div><div *ngIf="this.article?.id && this.article?.title && this.article?.content && this.article?.authors" class="article">
   <h3> {{this.article?.title}} </h3>
   <p> {{this.article?.content}} </p>
   <h4>From : <a routerLink="/author/{{this.article?.authors}}">{{this.article?.authors}}</a> </h4>
+  <div *ngIf="isDetail(); then detailDisplay else listDisplay"></div>
+</div>
+
+<ng-template #listDisplay>
   <button (click)="detail()">Full article</button>
   <button (click)="delete()">Delete</button>
+</ng-template>
+<ng-template #detailDisplay>
+  <button (click)="delete()">Delete</button>
+  <a routerLink="/"><button >Return</button></a>
+</ng-template>
 </div>
