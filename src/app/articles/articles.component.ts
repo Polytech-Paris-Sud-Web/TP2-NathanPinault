@@ -17,13 +17,12 @@ export class ArticlesComponent implements OnInit {
   }
 
   delete(article: Article) {  
-    this.articleService.deleteArticle(article.id).subscribe( {next: () => {
-    }});
+    this.articleService.deleteArticle(article.id).subscribe();
   }
 
   ngOnInit() {
-    this.articleService.getArticles().subscribe( (articles) => {
-      this.articles = articles.sort( (artcile1, artcile2) => artcile2.id - artcile1.id ).slice(0,10); 
+    this.articleService.getArticles().subscribe( (articles : Article[]) => {
+      this.articles = articles.sort( (artcile1 : Article, artcile2 : Article) => artcile2.id - artcile1.id ).slice(0,10); 
     });
   }
 }

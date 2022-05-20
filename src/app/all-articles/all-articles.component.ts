@@ -16,19 +16,18 @@ export class AllArticlesComponent implements OnInit {
   }
 
   search(inputSearch: string) {
-    this.articleService.getArticles().subscribe( (articles) => {
-      this.articles = articles.filter( (article) => article.title.includes(inputSearch) || article.content.includes(inputSearch) ); 
+    this.articleService.getArticles().subscribe( (articles : Article[]) => {
+      this.articles = articles.filter( (article : Article) => article.title.includes(inputSearch) || article.content.includes(inputSearch) ); 
     });
   }
 
   delete(article: Article) {  
-    this.articleService.deleteArticle(article.id).subscribe( {next: () => {
-    }});
+    this.articleService.deleteArticle(article.id).subscribe();
   }
 
   ngOnInit() {
-    this.articleService.getArticles().subscribe( (articles) => {
-      this.articles = articles.sort( (artcile1, artcile2) => artcile1.id - artcile2.id ); 
+    this.articleService.getArticles().subscribe( (articles : Article[]) => {
+      this.articles = articles.sort( (artcile1 : Article, artcile2 : Article) => artcile1.id - artcile2.id ); 
     });
   }
 

@@ -34,21 +34,20 @@ export class ArticleComponent implements OnInit {
   }
 
   detail(){
-    this.articleService.getArticle(this.article?.id).subscribe( {next: () => {
+    this.articleService.getArticle(this.article?.id).subscribe( () => {
       this.router.navigateByUrl(`/article/${this.article?.id}`);
-    }});;
+    });
   }
 
-  constructor(public articleService: ArticleService, private router: Router, private route: ActivatedRoute){
+  constructor(private articleService: ArticleService, private router: Router, private route: ActivatedRoute){
 
   }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if(id !== null && (parseInt(id) !== NaN || parseInt(id) !== undefined)) {
-      this.articleService.getArticle(parseInt(id)).subscribe( {next: (a) => {
+      this.articleService.getArticle(parseInt(id)).subscribe( (a : Article) => {
         this.article = a;
-        }
       });
     }
   }

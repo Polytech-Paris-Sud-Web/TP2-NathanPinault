@@ -14,7 +14,7 @@ export class ArticleCreationComponent implements OnInit {
 
   articleForm : FormGroup;
 
-  constructor(private fb: FormBuilder, public articleService: ArticleService, private router: Router) {
+  constructor(private fb: FormBuilder, private articleService: ArticleService, private router: Router) {
     this.articleForm = this.fb.group({
       title: ['A Title', Validators.required ],
       content : ['Some content', Validators.required ],
@@ -24,9 +24,9 @@ export class ArticleCreationComponent implements OnInit {
   
   create() {
     const newArticle : CreateArticle = this.articleForm.value;
-    this.articleService.createArticle(newArticle).subscribe( {next: () => {
+    this.articleService.createArticle(newArticle).subscribe( () => {
       this.router.navigateByUrl('/');
-    }});
+    });
   }
 
   ngOnInit(): void {
