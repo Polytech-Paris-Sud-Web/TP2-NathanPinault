@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652970936435,
+  "timestamp": 1653029347138,
   "index": "/TP2-NathanPinault/index.html",
   "assetGroups": [
     {
@@ -52,7 +52,7 @@
       ],
       "strategy": "performance",
       "maxSize": 100,
-      "maxAge": 432000000,
+      "maxAge": 2592000000,
       "cacheQueryOptions": {
         "ignoreVary": true
       },
